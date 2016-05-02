@@ -12,6 +12,9 @@ namespace MVCTemplate.Web
         {
             // You can perform a check like the one below to control Glimpse's permissions within your application.
 			// More information about RuntimePolicies can be found at http://getglimpse.com/Help/Custom-Runtime-Policy
+            
+            // TODO: Switch off Glimpse in real mode 
+
 			// var httpContext = policyContext.GetHttpContext();
             // if (!httpContext.User.IsInRole("Administrator"))
 			// {
