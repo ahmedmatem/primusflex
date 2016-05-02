@@ -7,6 +7,7 @@
     using Autofac;
     using Autofac.Integration.Mvc;
     using Data;
+    using Data.Common;
 
     public static class AutofacConfig
     {
@@ -42,6 +43,10 @@
         {
             builder.Register(x => new ApplicationDbContext())
                 .As<DbContext>()
+                .InstancePerRequest();
+
+            builder.RegisterGeneric(typeof(DbRepository<>))
+                .As(typeof(IDbRepository<>))
                 .InstancePerRequest();
         }
     }
