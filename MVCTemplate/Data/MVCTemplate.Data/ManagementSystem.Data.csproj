@@ -70,13 +70,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MVCTemplate.Data.Common\MVCTemplate.Data.Common.csproj">
+    <ProjectReference Include="..\MVCTemplate.Data.Common\ManagementSystem.Data.Common.csproj">
       <Project>{ede5d415-d916-434a-9960-b878b8664d4f}</Project>
-      <Name>MVCTemplate.Data.Common</Name>
+      <Name>ManagementSystem.Data.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MVCTemplate.Data.Models\MVCTemplate.Data.Models.csproj">
+    <ProjectReference Include="..\MVCTemplate.Data.Models\ManagementSystem.Data.Models.csproj">
       <Project>{5eccb6f3-d4ad-43b0-88d1-958a333a95d5}</Project>
-      <Name>MVCTemplate.Data.Models</Name>
+      <Name>ManagementSystem.Data.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

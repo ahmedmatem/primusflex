@@ -257,21 +257,21 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\MVCTemplate.Data.Common\MVCTemplate.Data.Common.csproj">
+    <ProjectReference Include="..\..\Data\MVCTemplate.Data.Common\ManagementSystem.Data.Common.csproj">
       <Project>{ede5d415-d916-434a-9960-b878b8664d4f}</Project>
-      <Name>MVCTemplate.Data.Common</Name>
+      <Name>ManagementSystem.Data.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\MVCTemplate.Data.Models\MVCTemplate.Data.Models.csproj">
+    <ProjectReference Include="..\..\Data\MVCTemplate.Data.Models\ManagementSystem.Data.Models.csproj">
       <Project>{5eccb6f3-d4ad-43b0-88d1-958a333a95d5}</Project>
-      <Name>MVCTemplate.Data.Models</Name>
+      <Name>ManagementSystem.Data.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\MVCTemplate.Data\MVCTemplate.Data.csproj">
+    <ProjectReference Include="..\..\Data\MVCTemplate.Data\ManagementSystem.Data.csproj">
       <Project>{d9fbe963-32b3-4495-9cf1-c9ea79e7331e}</Project>
-      <Name>MVCTemplate.Data</Name>
+      <Name>ManagementSystem.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MVCTemplate.Web.Infrastructure\MVCTemplate.Web.Infrastructure.csproj">
+    <ProjectReference Include="..\MVCTemplate.Web.Infrastructure\ManagementSystem.Web.Infrastructure.csproj">
       <Project>{d5463911-fd87-483c-b863-b07a3cf7ce24}</Project>
-      <Name>MVCTemplate.Web.Infrastructure</Name>
+      <Name>ManagementSystem.Web.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

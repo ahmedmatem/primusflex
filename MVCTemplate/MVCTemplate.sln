@@ -7,15 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{44FB925B-C5F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{45F01978-9642-458C-8FC6-2A95DF6DC380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTemplate.Web", "Web\MVCTemplate.Web\MVCTemplate.Web.csproj", "{6EA24CFA-5ACF-49BA-8DB9-D83867C0FCF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Web", "Web\MVCTemplate.Web\ManagementSystem.Web.csproj", "{6EA24CFA-5ACF-49BA-8DB9-D83867C0FCF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTemplate.Data.Models", "Data\MVCTemplate.Data.Models\MVCTemplate.Data.Models.csproj", "{5ECCB6F3-D4AD-43B0-88D1-958A333A95D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Data.Models", "Data\MVCTemplate.Data.Models\ManagementSystem.Data.Models.csproj", "{5ECCB6F3-D4AD-43B0-88D1-958A333A95D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTemplate.Data.Common", "Data\MVCTemplate.Data.Common\MVCTemplate.Data.Common.csproj", "{EDE5D415-D916-434A-9960-B878B8664D4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Data.Common", "Data\MVCTemplate.Data.Common\ManagementSystem.Data.Common.csproj", "{EDE5D415-D916-434A-9960-B878B8664D4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTemplate.Data", "Data\MVCTemplate.Data\MVCTemplate.Data.csproj", "{D9FBE963-32B3-4495-9CF1-C9EA79E7331E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Data", "Data\MVCTemplate.Data\ManagementSystem.Data.csproj", "{D9FBE963-32B3-4495-9CF1-C9EA79E7331E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTemplate.Web.Infrastructure", "Web\MVCTemplate.Web.Infrastructure\MVCTemplate.Web.Infrastructure.csproj", "{D5463911-FD87-483C-B863-B07A3CF7CE24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Web.Infrastructure", "Web\MVCTemplate.Web.Infrastructure\ManagementSystem.Web.Infrastructure.csproj", "{D5463911-FD87-483C-B863-B07A3CF7CE24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
