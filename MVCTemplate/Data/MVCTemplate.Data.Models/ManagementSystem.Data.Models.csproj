@@ -58,11 +58,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\BankName.cs" />
+    <Compile Include="Types\Group.cs" />
+    <Compile Include="Types\KitchenName.cs" />
+    <Compile Include="Types\WorkType.cs" />
+    <Compile Include="WorkReport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVCTemplate.Data.Common\ManagementSystem.Data.Common.csproj">
+      <Project>{ede5d415-d916-434a-9960-b878b8664d4f}</Project>
+      <Name>ManagementSystem.Data.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

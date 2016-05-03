@@ -3,7 +3,7 @@ namespace MVCTemplate.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class InitializeDB : DbMigration
     {
         public override void Up()
         {
@@ -35,6 +35,11 @@ namespace MVCTemplate.Data.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(nullable: false, maxLength: 60),
+                        Group = c.Int(nullable: false),
+                        BankName = c.Int(nullable: false),
+                        SortCode = c.String(),
+                        Account = c.String(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -75,20 +80,47 @@ namespace MVCTemplate.Data.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId);
             
+            CreateTable(
+                "dbo.WorkReports",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        UserId = c.String(maxLength: 128),
+                        PostCode = c.String(),
+                        Address = c.String(),
+                        KitchenName = c.Int(nullable: false),
+                        Plot = c.String(),
+                        WorkType = c.Int(nullable: false),
+                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Note = c.String(),
+                        CreatedOn = c.DateTime(nullable: false),
+                        ModifiedOn = c.DateTime(),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeletedOn = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AspNetUsers", t => t.UserId)
+                .Index(t => t.UserId)
+                .Index(t => t.IsDeleted);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.WorkReports", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropIndex("dbo.WorkReports", new[] { "IsDeleted" });
+            DropIndex("dbo.WorkReports", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropTable("dbo.WorkReports");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");

@@ -58,9 +58,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201605021303163_Initial Migration.cs" />
-    <Compile Include="Migrations\201605021303163_Initial Migration.Designer.cs">
-      <DependentUpon>201605021303163_Initial Migration.cs</DependentUpon>
+    <Compile Include="Migrations\201605030805553_Initialize DB.cs" />
+    <Compile Include="Migrations\201605030805553_Initialize DB.Designer.cs">
+      <DependentUpon>201605030805553_Initialize DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605031737124_Unrequired Name.cs" />
+    <Compile Include="Migrations\201605031737124_Unrequired Name.Designer.cs">
+      <DependentUpon>201605031737124_Unrequired Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605031938179_Add Employees.cs" />
+    <Compile Include="Migrations\201605031938179_Add Employees.Designer.cs">
+      <DependentUpon>201605031938179_Add Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605031944124_Add %28Application%29UserId to Employees.cs" />
+    <Compile Include="Migrations\201605031944124_Add %28Application%29UserId to Employees.Designer.cs">
+      <DependentUpon>201605031944124_Add %28Application%29UserId to Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605032001056_Corect field name.cs" />
+    <Compile Include="Migrations\201605032001056_Corect field name.Designer.cs">
+      <DependentUpon>201605032001056_Corect field name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605032005220_Corect UserId type from int to string.cs" />
+    <Compile Include="Migrations\201605032005220_Corect UserId type from int to string.Designer.cs">
+      <DependentUpon>201605032005220_Corect UserId type from int to string.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,8 +100,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605021303163_Initial Migration.resx">
-      <DependentUpon>201605021303163_Initial Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605030805553_Initialize DB.resx">
+      <DependentUpon>201605030805553_Initialize DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605031737124_Unrequired Name.resx">
+      <DependentUpon>201605031737124_Unrequired Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605031938179_Add Employees.resx">
+      <DependentUpon>201605031938179_Add Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605031944124_Add %28Application%29UserId to Employees.resx">
+      <DependentUpon>201605031944124_Add %28Application%29UserId to Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605032001056_Corect field name.resx">
+      <DependentUpon>201605032001056_Corect field name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605032005220_Corect UserId type from int to string.resx">
+      <DependentUpon>201605032005220_Corect UserId type from int to string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

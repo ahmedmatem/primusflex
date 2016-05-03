@@ -1,0 +1,44 @@
+﻿.btn {
+    border-radius: 0;
+}
+
+.btn-hot {
+  color: #ffffff;
+  background-color: #f38942;
+  border-color: #c8790a;
+}
+
+.btn-hot:hover,
+.btn-hot:focus,
+.btn-hot:active,
+.btn-hot.active,
+.open .dropdown-toggle.btn-hot {
+  color: #ffffff;
+  background-color: #f38942;
+  border-color: #9c5a11;
+}
+
+.btn-hot:active,
+.btn-hot.active,
+.open .dropdown-toggle.btn-hot {
+  background-image: none;
+}
+
+.btn-hot.disabled,
+.btn-hot[disabled],
+fieldset[disabled] .btn-hot,
+.btn-hot.disabled:hover,
+.btn-hot[disabled]:hover,
+fieldset[disabled] .btn-hot:hover,
+.btn-hot.disabled:focus,
+.btn-hot[disabled]:focus,
+fieldset[disabled] .btn-hot:focus,
+.btn-hot.disabled:active,
+.btn-hot[disabled]:active,
+fieldset[disabled] .btn-hot:active,
+.btn-hot.disabled.active,
+.btn-hot[disabled].active,
+fieldset[disabled] .btn-hot.active {
+  background-color: #f38942;
+  border-color: #c8790a;
+}

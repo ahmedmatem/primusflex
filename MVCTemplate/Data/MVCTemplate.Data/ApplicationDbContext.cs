@@ -15,6 +15,11 @@
         {
         }
 
+        public IDbSet<WorkReport> WorkReports { get; set; }
+
+        public IDbSet<Employee> Employees { get; set; }
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
