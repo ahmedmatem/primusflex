@@ -1,0 +1,44 @@
+﻿@model MVCTemplate.Web.ViewModels.Employees.EmployeeInfoViewModel
+
+@{
+    ViewBag.Title = "Info";
+}
+
+<div class="nav-path">
+    <a href="@Url.Content("~/Employees")">Employees</a> / Info
+</div>
+
+<fieldset>
+    <legend>Personal details</legend>
+    <div class="row">
+        <div class="col-md-2">Name</div>
+        <div class="col-md-10">@Model.Name</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Email</div>
+        <div class="col-md-10">@Model.Email</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Phone Number</div>
+        <div class="col-md-10">@Model.PhoneNumber</div>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>Bank details</legend>
+    <div class="row">
+        <div class="col-md-2">Bank name</div>
+        <div class="col-md-10">@Model.BankName</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Sort code</div>
+        <div class="col-md-10">@Model.SortCode</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Account number</div>
+        <div class="col-md-10">@Model.Account</div>
+</div>
+</fieldset>
+
+<br />
+<div><a href="@Url.Content("~/Employees")" class="btn btn-default"><i class="fa fa-backward"></i> Back to employees</a></div>

@@ -9,6 +9,10 @@
     padding-right: 15px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -24,5 +28,17 @@ textarea {
 }
 
 .navigation {
-    padding-top: 5px;
+    padding: 5px 0;
+}
+
+.nav-path {
+    padding: 5px 10px;
+    background-color: #ebebeb;
+    border: 1px solid #cccccc;
+    margin-bottom: 2px;
+}
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
 }
