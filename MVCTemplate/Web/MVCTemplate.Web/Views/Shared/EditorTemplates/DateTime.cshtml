@@ -1,0 +1,7 @@
+﻿@model DateTime?
+
+@{
+    var defaultDate = DateTime.Now.ToString("dd/mm/yyyy");
+}
+
+@Html.TextBoxFor(m => Model, Model.HasValue ? Model.Value.ToString("MM/dd/yyyy") : defaultDate, new { @class = "form-control", id = "datepicker" })

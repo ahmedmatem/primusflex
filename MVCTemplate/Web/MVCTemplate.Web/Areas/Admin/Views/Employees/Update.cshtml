@@ -1,0 +1,63 @@
+﻿@model MVCTemplate.Web.Areas.Admin.ViewModels.Employees.UpdateEmployeeViewModel
+
+@{
+    ViewBag.Title = "Update employee";
+}
+
+<div class="nav-path">
+    <a href="@Url.Content("~/Admin/Employees")">Employees</a> / Update
+</div>
+
+@using (Html.BeginForm("Update", "Employees", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(m => m.Id)
+
+    <fieldset>
+        <legend>@Model.Name</legend>
+        <div class="form-group required">
+            @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Bank details</legend>
+        <div class="form-group required">
+            @Html.LabelFor(m => m.BankName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(m => m.BankName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group required">
+            @Html.LabelFor(m => m.SortCode, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.SortCode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.SortCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group required">
+            @Html.LabelFor(m => m.Account, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Account, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Account, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Update" />
+            <a href="@Url.Content("~/Admin/Employees")" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

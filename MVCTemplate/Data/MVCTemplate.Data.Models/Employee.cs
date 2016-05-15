@@ -19,8 +19,6 @@
         [StringLength(60, MinimumLength = 3)]
         public string Name { get; set; }
 
-        public Group Group { get; set; }
-
         public BankName BankName { get; set; }
 
         public string SortCode { get; set; }

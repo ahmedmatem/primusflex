@@ -1,4 +1,4 @@
-﻿namespace MVCTemplate.Web.ViewModels.Employees
+﻿namespace MVCTemplate.Web.Areas.Admin.ViewModels.Employees
 {
     using System.ComponentModel.DataAnnotations;
 
@@ -23,8 +23,6 @@
         public string ConfirmPassword { get; set; }
 
         public string PhoneNumber { get; set; }
-
-        public Group Group { get; set; }
 
         // Bank details
 

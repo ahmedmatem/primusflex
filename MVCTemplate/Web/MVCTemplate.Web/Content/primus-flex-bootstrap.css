@@ -42,3 +42,11 @@ fieldset[disabled] .btn-hot.active {
   background-color: #f38942;
   border-color: #c8790a;
 }
+
+.input-group-addon {
+    border-radius: 0;
+}
+
+#emailInput {
+    border-radius: 0;
+}

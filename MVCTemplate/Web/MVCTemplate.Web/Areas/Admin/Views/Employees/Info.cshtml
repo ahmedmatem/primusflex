@@ -1,11 +1,11 @@
-﻿@model MVCTemplate.Web.ViewModels.Employees.EmployeeInfoViewModel
+﻿@model MVCTemplate.Web.Areas.Admin.ViewModels.Employees.EmployeeInfoViewModel
 
 @{
     ViewBag.Title = "Info";
 }
 
 <div class="nav-path">
-    <a href="@Url.Content("~/Employees")">Employees</a> / Info
+    <a href="@Url.Content("~/Admin/Employees")">Employees</a> / Info
 </div>
 
 <fieldset>
@@ -24,6 +24,8 @@
     </div>
 </fieldset>
 
+<br />
+
 <fieldset>
     <legend>Bank details</legend>
     <div class="row">
@@ -41,4 +43,4 @@
 </fieldset>
 
 <br />
-<div><a href="@Url.Content("~/Employees")" class="btn btn-default"><i class="fa fa-backward"></i> Back to employees</a></div>
+<div><a href="@Url.Content("~/Admin/Employees")" class="btn btn-default"><i class="fa fa-backward"></i> Back to employees</a></div>

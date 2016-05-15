@@ -1,4 +1,4 @@
-﻿namespace MVCTemplate.Web.ViewModels.Employees
+﻿namespace MVCTemplate.Web.Areas.Admin.ViewModels.Employees
 {
     using Infrastructure.Mapping;
     using MVCTemplate.Data.Models.Types;

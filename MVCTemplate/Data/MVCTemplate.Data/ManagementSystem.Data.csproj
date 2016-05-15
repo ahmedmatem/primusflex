@@ -82,6 +82,18 @@
     <Compile Include="Migrations\201605032005220_Corect UserId type from int to string.Designer.cs">
       <DependentUpon>201605032005220_Corect UserId type from int to string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605080954147_DeleteGroupFromEmployee.cs" />
+    <Compile Include="Migrations\201605080954147_DeleteGroupFromEmployee.Designer.cs">
+      <DependentUpon>201605080954147_DeleteGroupFromEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605141148340_AddDateToReports.cs" />
+    <Compile Include="Migrations\201605141148340_AddDateToReports.Designer.cs">
+      <DependentUpon>201605141148340_AddDateToReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605151140091_AddWeekNumberInWorkReports.cs" />
+    <Compile Include="Migrations\201605151140091_AddWeekNumberInWorkReports.Designer.cs">
+      <DependentUpon>201605151140091_AddWeekNumberInWorkReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -117,6 +129,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605032005220_Corect UserId type from int to string.resx">
       <DependentUpon>201605032005220_Corect UserId type from int to string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605080954147_DeleteGroupFromEmployee.resx">
+      <DependentUpon>201605080954147_DeleteGroupFromEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605141148340_AddDateToReports.resx">
+      <DependentUpon>201605141148340_AddDateToReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605151140091_AddWeekNumberInWorkReports.resx">
+      <DependentUpon>201605151140091_AddWeekNumberInWorkReports.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

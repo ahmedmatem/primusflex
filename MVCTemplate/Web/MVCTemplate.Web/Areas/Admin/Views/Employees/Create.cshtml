@@ -1,11 +1,11 @@
-﻿@model MVCTemplate.Web.ViewModels.Employees.CreateEmployeeViewModel
+﻿@model MVCTemplate.Web.Areas.Admin.ViewModels.Employees.CreateEmployeeViewModel
 
 @{
     ViewBag.Title = "Create employee";
 }
 
 <div class="nav-path">
-    <a href="@Url.Content("~/Employees")">Employees</a> / Create a new Employee
+    <a href="@Url.Content("~/Admin/Employees")">Employees</a> / Create a new Employee
 </div>
 
 @using (Html.BeginForm("Create", "Employees", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -20,12 +20,6 @@
             <div class="col-md-10">
                 @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group required">
-            @Html.LabelFor(m => m.Group, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(m => m.Group, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
@@ -88,7 +82,7 @@
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Create" />
-            <a href="@Url.Content("~/Employees")" class="btn btn-default">Cancel</a>
+            <a href="@Url.Content("~/Admin/Employees")" class="btn btn-default">Cancel</a>
         </div>
     </div>
 }

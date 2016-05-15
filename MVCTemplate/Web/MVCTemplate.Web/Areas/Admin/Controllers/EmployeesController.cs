@@ -1,27 +1,24 @@
-﻿namespace MVCTemplate.Web.Controllers
+﻿namespace MVCTemplate.Web.Areas.Admin.Controllers
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
     using System.Web.Mvc;
 
     using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.Owin;
     using Microsoft.AspNet.Identity.EntityFramework;
 
+    using Web.Controllers;
     using Data.Common;
     using Data.Models;
+    using Data;
 
     using Infrastructure.Mapping;
-
     using ViewModels.Employees;
-    using Data;
-    [Authorize(Roles ="Admin")]
+
+    [Authorize(Roles = "Admin")]
     public class EmployeesController : BaseController
     {
         private readonly IDbRepository<Employee> employee;
-        private ApplicationUserManager userManager;
 
         public EmployeesController(IDbRepository<Employee> employee)
         {
@@ -29,7 +26,7 @@
         }
 
 
-        // GET: Employees
+        // GET: Admin/Employees
         public ActionResult Index()
         {
             var model = this.employee.All()
@@ -39,7 +36,7 @@
             return View(model);
         }
 
-        // GET: Employees/Create
+        // GET: Admin/Employees/Create
         [HttpGet]
         public ActionResult Create()
         {
@@ -48,7 +45,7 @@
             return this.View(model);
         }
 
-        // POST: Employees/Create
+        // POST: Admin/Employees/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CreateEmployeeViewModel model)
@@ -85,19 +82,52 @@
             return this.View(model);
         }
 
-        public ApplicationUserManager UserManager
+        // GET: Admin/Employees/Update/id
+        [HttpGet]
+        public ActionResult Update(int id)
         {
-            get
-            {
-                return userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set
-            {
-                userManager = value;
-            }
+            var employee = this.employee.GetById(id);
+
+            var model = this.Mapper.Map<UpdateEmployeeViewModel>(employee);
+
+            return this.View(model);
         }
 
-        // GET: Employee/Info/id
+        // POST: Admin/Employees/Update
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(UpdateEmployeeViewModel model)
+        {
+            if(!ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
+            var employee = this.employee.GetById(model.Id);
+
+            employee.Name = model.Name;
+            employee.BankName = model.BankName;
+            employee.SortCode = model.SortCode;
+            employee.Account = model.Account;
+
+            this.employee.Update(employee);
+            this.employee.Save();
+
+            return RedirectToAction("Index");
+        }
+
+        // GET: Admin/Employees/Delete/id
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var employee = this.employee.GetById(id);
+            this.employee.Delete(employee);
+            this.employee.Save();
+
+            return RedirectToAction("Index");
+        }
+
+        // GET: Admin/Employee/Info/id
         public ActionResult Info(int id)
         {
             var employee = this.employee.GetById(id);

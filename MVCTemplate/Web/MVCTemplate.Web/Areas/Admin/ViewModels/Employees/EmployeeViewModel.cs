@@ -1,4 +1,4 @@
-﻿namespace MVCTemplate.Web.ViewModels.Employees
+﻿namespace MVCTemplate.Web.Areas.Admin.ViewModels.Employees
 {
     using System;
     using System.Collections.Generic;
