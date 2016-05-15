@@ -21,9 +21,9 @@
             this.DbSet = this.Context.Set<T>();
         }
 
-        private IDbSet<T> DbSet { get; }
+        private IDbSet<T> DbSet { get; set; }
 
-        private DbContext Context { get; }
+        private DbContext Context { get; set; }
 
         public IQueryable<T> All()
         {
